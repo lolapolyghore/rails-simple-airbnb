@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+ .flats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.flat {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.flat h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.flat p {
+  margin: 5px 0;
+}
+
+.flat {
+  /* Add flexbox to make it a column layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Aligns items at the top and bottom */
+  height: 100%; /* Make the card take full height */
+}
